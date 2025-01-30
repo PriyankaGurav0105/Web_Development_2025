@@ -1,8 +1,8 @@
 
 import  { useState } from "react";
-import { questions } from "./data";
-import Navbar from "./components/Navbar";
-import QuestionList from "./components/QuestionList";
+import { questions } from "./data.jsx";
+import Navbar from "./components/Navbar.jsx";
+import QuestionList from "./components/QuestionList.jsx";
 
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState("HTML & CSS");

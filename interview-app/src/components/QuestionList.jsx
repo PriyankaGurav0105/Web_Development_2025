@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+
 export default function QuestionList({ questions, searchTerm }) {
   const filteredQuestions = questions.filter(q =>
     q.question.toLowerCase().includes(searchTerm.toLowerCase())
@@ -13,10 +14,11 @@ export default function QuestionList({ questions, searchTerm }) {
         filteredQuestions.map((q, index) => (
           <div key={index} className="bg-white shadow-md p-6 rounded-lg hover:shadow-xl transition">
             <h2 className="text-lg font-semibold text-blue-700">{q.question}</h2>
-            <p className="text-gray-600 mt-2">{q.answer}</p>
+            <div className="text-gray-600 mt-2">{q.answer}</div>
           </div>
         ))
       )}
     </div>
   );
 }
+

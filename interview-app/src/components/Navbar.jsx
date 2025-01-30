@@ -3,7 +3,7 @@
 export default function Navbar({ categories, setSelectedCategory, searchTerm, setSearchTerm }) {
   return (
     <nav className="bg-blue-600 text-white p-4 shadow-md">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
         <h1 className="text-2xl font-bold">Web Dev Interview Questions</h1>
 
         <select 
