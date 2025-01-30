@@ -195,7 +195,61 @@ sticky: Behaves like relative but sticks when scrolling.<br/>
     {
       question: "What is the difference between `var`, `let`, and `const`?",
       answer:
-        "`var` is function-scoped, `let` is block-scoped, and `const` is block-scoped with immutable bindings."
+        "var: Function-scoped, can be redeclared and updated, hoisted with undefined. let: Block-scoped, can be updated but not redeclared. const: Block-scoped, cannot be updated or redeclared."
+    },
+    {
+      question: "Difference between == and === in JavaScript?",
+      answer:
+        "== (Loose equality): Converts values to the same type before comparison.=== (Strict equality): Compares both value and type."
+    },
+    {
+      question: "How does the JavaScript Event Loop work?",
+      answer:
+        "The event loop manages asynchronous tasks. It continuously checks the call stack and the task queue. Sync code runs first. Async callbacks (like setTimeout, Promises) go into the task queue and execute later."
+    },
+    {
+      question: "Difference between == and === in JavaScript?",
+      answer:
+        "== (Loose equality): Converts values to the same type before comparison.=== (Strict equality): Compares both value and type."
+    },
+    {
+      question: "Synchronous vs Asynchronous Programming?",
+      answer:
+        "Synchronous: Executes line by line, blocking further execution.Asynchronous: Executes non-blocking tasks like API calls, timers, Promises."
+    },
+    {
+      question: "How setTimeout and setInterval work?",
+      answer:
+        "setTimeout(fn, delay): Runs fn once after delay. setInterval(fn, delay): Runs fn repeatedly every delay ms."
+    },
+    {
+      question: "What is Hoisting in JavaScript?",
+      answer:
+        "Hoisting moves function declarations and var variables to the top before execution."
+    },
+    {
+      question: "Difference between map(), forEach(), filter(), and reduce()?",
+      answer:
+        (
+          <>
+          map(): Creates a new array with transformed values. <br/> 
+          forEach(): Executes a function on each element. <br/>
+          filter(): Creates a new array with elements that pass a test. <br/>
+          reduce(): Accumulates a value by applying a function to each element.
+          <pre className="bg-gray-800 text-white p-4 rounded mt-2 ">
+            <code className="whitespace-pre-wrap break-words">
+                {"let arr = [1, 2, 3, 4];"}<br/>
+                {"let doubled = arr.map(n => n * 2);"}<br/>
+                {"console.log(doubled); // [2, 4, 6, 8]"}<br/>
+                {"arr.forEach(n => console.log(n)); // Logs each item"}<br/>
+                {"let even = arr.filter(n => n % 2 === 0);"}<br/>
+                {"console.log(even); // [2, 4]"}<br/>
+                {"let sum = arr.reduce((acc, n) => acc + n, 0);"}<br/>
+                {"console.log(sum); // 10"}<br/>
+            </code>
+            </pre>
+          </>
+        )
     },
     {
       question: "Explain closures in JavaScript.",
@@ -206,22 +260,30 @@ sticky: Behaves like relative but sticks when scrolling.<br/>
             after the parent function has closed.
           </p>
           <pre className="bg-gray-800 text-white p-4 rounded mt-2">
-            <code>
-              {"function outer() {"}
-              {"let count = 0;"}
-              {"function inner() {"}
-              {"count++;"}
-              {"console.log(count);"}
-              {"}"}
-              {"return inner;"}
-              {"}"}
-              {"const counter = outer();"}
-              {"counter(); // Output: 1"}
-              {"counter(); // Output: 2"}
+            <code className="whitespace-pre-wrap break-words">
+              {"function outer() {"}<br/>
+              {"let count = 0;"}<br/>
+              {"function inner() {"}<br/>
+              {"count++;"}<br/>
+              {"console.log(count);"}<br/>
+              {"}"}<br/>
+              {"return inner;"}<br/>
+              {"}"}<br/>
+              {"const counter = outer();"}<br/>
+              {"counter(); // Output: 1"}<br/>
+              {"counter(); // Output: 2"}<br/>
             </code>
           </pre>
         </>
       )
+    },
+    {
+      question: "What are Promises, and how do they work?",
+      answer: "A Promise handles async operations, returning results with .then() or errors with .catch()."
+    },
+    {
+      question:"Purpose of async and await?",
+      answer:"async: Marks a function as asynchronous. await: Waits for a Promise to resolve.",
     }
   ],
 

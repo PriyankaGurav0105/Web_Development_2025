@@ -12,14 +12,17 @@ export default function QuestionList({ questions, searchTerm }) {
         <p className="text-gray-500 text-center col-span-3">No questions found.</p>
       ) : (
         filteredQuestions.map((q, index) => (
-          <div key={index} className="bg-white shadow-md p-6 rounded-lg hover:shadow-xl transition">
+          <div 
+            key={index} 
+            className="bg-white shadow-md p-6 rounded-lg hover:shadow-xl transition w-full min-h-0 flex flex-col break-words"
+          >
             <h2 className="text-lg font-semibold text-blue-700">{q.question}</h2>
             <div className="text-gray-600 mt-2">{q.answer}</div>
-            
           </div>
         ))
       )}
     </div>
   );
 }
+
 
