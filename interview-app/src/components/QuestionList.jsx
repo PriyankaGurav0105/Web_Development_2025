@@ -15,6 +15,7 @@ export default function QuestionList({ questions, searchTerm }) {
           <div key={index} className="bg-white shadow-md p-6 rounded-lg hover:shadow-xl transition">
             <h2 className="text-lg font-semibold text-blue-700">{q.question}</h2>
             <div className="text-gray-600 mt-2">{q.answer}</div>
+            
           </div>
         ))
       )}
