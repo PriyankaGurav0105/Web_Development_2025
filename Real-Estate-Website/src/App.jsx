@@ -1,7 +1,21 @@
+import Navbar from "./components/Navbar"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="text-3xl font-bold underline text-blue-800">App</div>
+    <Router>
+      <Navbar />
+      <div className="p-6">
+        {/* <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/property/residential" element={<Residential />} />
+          <Route path="/property/commercial" element={<Commercial />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes> */}
+      </div>
+    </Router>
   )
 }
 
