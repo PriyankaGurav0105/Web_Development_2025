@@ -1,3 +1,4 @@
+import Hero from "./components/Hero";
 import Navbar from "./components/Navbar"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -5,6 +6,7 @@ const App = () => {
   return (
     <Router>
       <Navbar />
+      <Hero/>
       <div className="p-6">
         {/* <Routes>
           <Route path="/" element={<Home />} />

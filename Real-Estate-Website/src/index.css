@@ -1,1 +1,89 @@
 @import "tailwindcss";
+
+
+/* background-color: #lalala; */
+/* text-color:#eee; */
+/* border-radius:30px; */
+
+.card{
+    width: 100%;
+    height: 60%;
+    color: #eee;
+    position: relative;
+}
+.card .author{
+    background-color: #1a1a1a;
+    width: 60%;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 20px;
+    padding: 10px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.card .author .name{
+    font-weight: bold;
+}
+.card .image{
+    background-color: #1a1a1a;
+    text-align: center;
+    border-top-right-radius: 30px;
+}
+.card .image img{
+    width: 90%;
+   
+}
+
+
+.card .more{
+    background-color: #1a1a1a;
+    padding: 0 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.card .more .buttons{
+    display: flex;
+    gap: 5px;
+}
+
+.card .more .buttons button{
+    font-family: Poppins;
+    color: #eee;
+    background-color: #1a1a1a;
+    border: 1px solid #454545;
+    padding:  0 20px;
+    border-radius: 30px;
+}
+.card::before{
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 70px;
+    content: "";
+    border-bottom-left-radius: 30px;
+    box-shadow:-30px 30px 0 #1a1a1a;
+}
+
+.card::after{
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 60px;
+    content: 'text';
+    width: calc(40% - 10px);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: large;
+
+}
