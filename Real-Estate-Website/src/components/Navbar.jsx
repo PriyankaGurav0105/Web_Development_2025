@@ -44,6 +44,7 @@ export default function Navbar() {
                   to="/property/commercial"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                 >
+                    
                   Commercial
                 </Link>
               </div>
